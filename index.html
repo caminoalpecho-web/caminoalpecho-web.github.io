@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Camino al Pecho</title>
+  <title>Adriana Torrents – Asesora de lactancia y maternidad | Camino al Pecho</title>
 
-  <!-- Google Fonts: Belleza (titles) + Cormorant Garamond (body) -->
+  <meta name="description" content="Adriana Torrents, asesora de lactancia certificada, acompaña a madres en su camino con la lactancia materna y la maternidad. Asesoría personalizada, apoyo emocional y soluciones prácticas online.">
+
+<!-- Google Fonts: Belleza (titles) + Cormorant Garamond (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -134,6 +136,15 @@
       position: relative;
       overflow: hidden;
       scroll-snap-align: start;
+      scroll-margin-top: 80px;
+    }
+
+    /* Hero specific layout: avoid partial visibility when scrolling back up */
+    #hero.page-shell {
+      /* Center hero content vertically but keep comfortable padding
+         to avoid navbar overlap when navigating between sections */
+      padding-top: 5.5rem;
+      padding-bottom: 3rem;
     }
 
     .section-empty {
@@ -220,6 +231,286 @@
       outline: 2px solid rgba(0, 0, 0, 0.25);
       outline-offset: 3px;
     }
+
+    /* ABOUT SECTION */
+    .about-section {
+      background: transparent;
+    }
+
+    .about-inner {
+      max-width: 960px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    .about-photo {
+      flex: 0 0 34%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-photo-circle {
+      width: min(220px, 40vw);
+      aspect-ratio: 3/4;
+      border-radius: 999px;
+      background: radial-gradient(circle at 20% 0%, rgba(255,255,255,0.95), rgba(255,244,232,0.95), rgba(240,219,197,0.9));
+      border: 1px solid rgba(0,0,0,0.04);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .about-photo-initials {
+      font-family: "Belleza", serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      opacity: 0.55;
+    }
+
+    .about-copy {
+      flex: 1;
+      text-align: left;
+    }
+
+    .about-kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      margin-bottom: 0.25rem;
+    }
+
+    .about-role {
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      margin-bottom: 0.7rem;
+    }
+
+    .about-title {
+      font-family: "Belleza", serif;
+      font-size: clamp(1.5rem, 1.15rem + 0.9vw, 2rem);
+      letter-spacing: 0.08em;
+      text-transform: none;
+      margin-bottom: 0.3rem;
+    }
+
+    .about-body {
+      display: none;
+    }
+
+    .about-elevator {
+      font-style: italic;
+      font-size: 0.96rem;
+      line-height: 1.7;
+      letter-spacing: 0.02em;
+      opacity: 0.82;
+      margin-bottom: 0.8rem;
+    }
+
+    .about-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.6rem 0 1rem;
+    }
+
+    .about-pill {
+      font-size: 0.78rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    .about-credentials {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 0.2rem;
+    }
+
+    .about-credential-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .about-credential-text {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    /* Minimal, centered variant for the current About */
+    .about-inner-centered {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+      max-width: 600px;
+    }
+
+    .about-photo-circle-minimal {
+      width: min(220px, 42vw);
+      aspect-ratio: 3/4;
+      border-radius: 24px;
+      background: radial-gradient(circle at 40% 30%, #fffdf9, #faefe4, #e9d7c4);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .about-copy-centered {
+      text-align: center;
+    }
+
+    .about-kicker-soft {
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      margin-bottom: 0.6rem;
+    }
+
+    .about-title-minimal {
+      letter-spacing: 0.06em;
+      margin-bottom: 0.9rem;
+    }
+
+    .about-tagline {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+
+    .about-elevator-short {
+      font-style: italic;
+      font-size: 1rem;
+      opacity: 0.75;
+      max-width: 420px;
+      margin: 0 auto 1.4rem;
+      line-height: 1.6;
+    }
+
+    .about-credentials-soft {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.4rem;
+    }
+
+    .about-credential-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      color: var(--camino-ink);
+    }
+
+    .about-credential-icon {
+      font-size: 0.95rem;
+      color: rgba(200, 168, 137, 0.85);
+    }
+
+    .about-credentials-soft .about-credential-text {
+      font-size: 0.78rem;
+      opacity: 0.6;
+    }
+
+    .about-credential-link:hover .about-credential-text {
+      opacity: 0.8;
+    }
+
+    .about-credential-dot { display: none; }
+
+    .about-credential-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      color: var(--camino-ink);
+    }
+
+    .about-credential-icon {
+      font-size: 0.95rem;
+      color: rgba(200, 168, 137, 0.85);
+    }
+
+    .about-credential-text {
+      font-size: 0.78rem;
+      opacity: 0.6;
+    }
+
+    .about-credential-link:hover .about-credential-text {
+      opacity: 0.8;
+    }
+
+    .about-credentials-soft .about-credential-text {
+      font-size: 0.78rem;
+      opacity: 0.6;
+    }
+
+    @media(max-width:768px) and (orientation: portrait){
+      #hero.page-shell{padding-top:4.8rem;padding-bottom:2.4rem;}
+
+      .hero{max-width:90vw;}
+      .hero-title{font-size:clamp(1.8rem,6vw,2.2rem);letter-spacing:0.18em;white-space:normal;}
+      .hero-owner{margin-bottom:0.6rem;}
+      .hero-label{margin-top:1rem;margin-bottom:1rem;}
+      .hero-subtitle{font-size:0.85rem;margin-bottom:0.7rem;}
+
+      .about-inner{flex-direction:column;gap:2rem;max-width:600px;}
+      #about .about-inner{margin-top:3.5rem;}
+      .about-copy{text-align:center;margin:0 auto;}
+      .about-elevator-short{text-align:center;margin:0 auto 1.4rem;}
+      .about-credentials-soft{justify-content:center;}
+    }
+
+    @media(min-width:769px), (orientation: landscape){
+      .about-inner{flex-direction:row;gap:3rem;max-width:960px;}
+      .about-copy{text-align:left;}
+      .about-elevator-short{text-align:left;margin:0 0 1.4rem 0;max-width:480px;}
+      .about-credentials-soft{justify-content:flex-start;}
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(14px) scale(0.985);
+      filter: blur(2px);
+      transition: opacity 0.5s ease-out, transform 0.6s ease-out, filter 0.5s ease-out;
+    }
+    .animate-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    
 
     /* Abstract breast SVG */
     .breast-visual {
@@ -413,14 +704,32 @@
           rel="noopener noreferrer"
           class="btn btn-calendly"
         >
-          Hablemos<i class="bi bi-arrow-up-right" style="font-size:0.9rem; margin-left:2px; opacity:0.45;"></i>
+          Hablemos <i class="bi bi-arrow-up-right" style="font-size:0.9rem; margin-left:2px; opacity:0.45;"></i>
         </a>
       </div>
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="page-shell section-empty" aria-label="Acerca de mí">
-      <!-- Próximamente: Acerca de mí -->
+    <section id="about" class="page-shell section-empty about-section" aria-label="Acerca de mí">
+      <div class="about-inner animate-on-scroll">
+        <div class="about-photo-circle about-photo-circle-minimal">
+          <span class="about-photo-initials">AT</span>
+        </div>
+        <div class="about-copy">
+          <p class="about-kicker about-kicker-soft">Quién te acompaña</p>
+          <h2 class="about-title about-title-minimal">Adriana</h2>
+          <p class="about-elevator about-elevator-short">Madre y asesora de lactancia, a tu lado cuando la lactancia pide calma.</p>
+          <p class="visually-hidden">Asesoría de lactancia materna y acompañamiento personalizado para madres en todas las etapas de la maternidad.</p>
+          <p class="about-tagline">Lactancia · Maternidad</p>
+
+          <div class="about-credentials-soft" style="margin-top:0.6rem;">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="about-credential-link" title="Certificada oficialmente por LactApp">
+              <i class="bi bi-patch-check-fill about-credential-icon" aria-hidden="true"></i>
+              <span class="about-credential-text">Certificada por LactApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- SERVICES SECTION -->
@@ -445,9 +754,9 @@
     </p>
 
     <div class="footer-legal">
-      <a href="/pages/privacidad.html">Política de privacidad</a>
-      <a href="/pages/cookies.html">Política de cookies</a>
-      <a href="/pages/avisolegal.html">Aviso legal</a>
+      <a href="privacidad.html">Política de privacidad</a>
+      <a href="cookies.html">Política de cookies</a>
+      <a href="avisolegal.html">Aviso legal</a>
     </div>
 
     <p class="footer-copy">
@@ -488,6 +797,15 @@
       window.addEventListener('load', updateBrandVisibility);
 
       updateBrandVisibility();
+
+      // animate about
+      const blocks=document.querySelectorAll('.animate-on-scroll');
+      if('IntersectionObserver'in window){
+        const ob=new IntersectionObserver(es=>{
+          es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('is-visible');});
+        },{threshold:0.25});
+        blocks.forEach(b=>ob.observe(b));
+      } else {blocks.forEach(b=>b.classList.add('is-visible'));}
 
       // Auto-collapse mobile nav after selecting a section
       const navbarCollapse = document.getElementById('caminoNavbar');

@@ -28,7 +28,7 @@
     :root {
       --camino-bg: #fffaf4; /* softer near-white pastel */ /* main pastel base, super smooth */
       --camino-ink: #1c1a1a; /* deep soft charcoal */
-      --camino-accent: #f2d8bd; /* lighter champagne accent */ /* warm muted champagne */
+      --camino-accent: #c8a889; /* lighter champagne accent */ /* warm muted champagne */
       --camino-radius: 999px;
       --camino-transition: 200ms ease-out;
     }
@@ -185,15 +185,6 @@
       margin-bottom: 1.3rem;
     }
 
-    /* .hero-subtitle {
-      font-size: 0.9rem;
-      line-height: 1.7;
-      letter-spacing: 0.03em;
-      opacity: 0.7;
-      margin-bottom: 0.8rem;
-      font-style: italic;
-    } */
-
     .btn-calendly {
       border-radius: var(--camino-radius);
       padding: 0.85rem 2.6rem;
@@ -244,39 +235,80 @@
       animation: breastOrbit 26s ease-in-out infinite alternate;
     }
 
+        /* Footer */
+    .footer {
+      background-color: var(--camino-bg);
+      color: var(--camino-ink);
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 2.8rem 1.5rem 2.4rem;
+      text-align: center;
+    }
+
+    .footer-logo-link {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.1rem;
+    }
+
+    .footer-icon {
+      font-size: 2.3rem;
+      opacity: 0.45;
+      color: var(--camino-accent);
+      transition: transform var(--camino-transition), opacity var(--camino-transition);
+    }
+
+    .footer-logo-link:hover .footer-icon {
+      transform: translateY(-1px);
+      opacity: 1;
+    }
+
+    .footer-quote {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(0.9rem, 0.8rem + 0.3vw, 1.05rem);
+      opacity: 0.72;
+      max-width: 420px;
+      margin: 0 auto 1.2rem auto;
+    }
+
+    .footer-legal {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+      font-size: clamp(0.74rem, 0.7rem + 0.2vw, 0.82rem);
+      opacity: 0.6;
+    }
+
+    .footer-legal a {
+      text-decoration: none;
+      color: var(--camino-ink);
+    }
+
+    .footer-legal a:hover {
+      opacity: 0.9;
+    }
+
+    .footer-copy {
+      font-size: clamp(0.7rem, 0.66rem + 0.18vw, 0.8rem);
+      opacity: 0.52;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
     @media (max-width: 576px) {
-      .hero-title {
-        white-space: normal;
-        font-size: 1.7rem;
-        letter-spacing: 0.18em;
+      .footer {
+        padding-inline: 1.4rem;
       }
 
-      .hero-inline-meta {
-        font-size: 0.9rem;
-        letter-spacing: 0.1em;
+      .footer-quote {
+        max-width: 360px;
       }
 
-      .hero-label {
-        font-size: 0.78rem;
-        letter-spacing: 0.16em;
-      }
-
-      .hero-subtitle {
-        font-size: 0.82rem;
-      }
-
-      .btn-calendly {
-        padding: 0.75rem 2.1rem;
-        font-size: 0.8rem;
-        letter-spacing: 0.16em;
-      }
-
-      .page-shell {
-        padding-inline: 1.2rem;
-      }
-
-      .navbar-brand {
-        font-size: 0.78rem;
+      .footer-legal {
+        gap: 0.55rem;
       }
     }
 
@@ -375,15 +407,13 @@
 
         <div class="hero-label">Un solo clic para sentirte acompañada.</div>
 
-        <!-- <p class="hero-subtitle"></p> -->
-
         <a
           href="https://calendly.com/caminoalpecho/reservarcita"
           target="_blank"
           rel="noopener noreferrer"
           class="btn btn-calendly"
         >
-          Hablemos <i class="bi bi-box-arrow-up-right" style="font-size:0.9rem; margin-left:4px;"></i>
+          Hablemos<i class="bi bi-arrow-up-right" style="font-size:0.9rem; margin-left:2px; opacity:0.45;"></i>
         </a>
       </div>
     </section>
@@ -405,14 +435,22 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer text-center py-5" style="background-color: var(--camino-bg); color: var(--camino-ink); border-top: 1px solid rgba(0,0,0,0.05);">
-    <a href="#top" style="text-decoration:none;">
-      <i class="bi bi-flower3" style="font-size:2.4rem; opacity:0.85; margin-bottom:1rem; display:inline-block; color: var(--camino-accent);"></i>
+  <footer class="footer">
+    <a href="#top" class="footer-logo-link" aria-label="Volver al inicio">
+      <i class="bi bi-flower3 footer-icon"></i>
     </a>
-    <p style="font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; opacity:0.7; margin-bottom: 0.6rem;">
-      “Cada lactancia, un camino.”
+
+    <p class="footer-quote">
+      “Cada lactancia, un camino”
     </p>
-    <p style="font-size: 0.75rem; opacity:0.55; letter-spacing: 0.08em; text-transform: uppercase;">
+
+    <div class="footer-legal">
+      <a href="/pages/privacidad.html">Política de privacidad</a>
+      <a href="/pages/cookies.html">Política de cookies</a>
+      <a href="/pages/avisolegal.html">Aviso legal</a>
+    </div>
+
+    <p class="footer-copy">
       © 2025 Camino al Pecho
     </p>
   </footer>
